@@ -33,7 +33,7 @@
             <a href=""><img src="" alt=""></a>
         </div>  
         <div class="right">
-            <div class="link">
+            <div class="link">s
                 <a href="">New Team</a>
                 <a href="">text</a>
                 <a href="">Account</a>
