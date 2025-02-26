@@ -25,7 +25,7 @@
                 </div>
                 <div class="left-bottom">
 
-                    <form action="" method="post" >
+                    <form action="./backend/loginBE.php" method="post" >
 
                         <label for="">Username</label>
                         <br>

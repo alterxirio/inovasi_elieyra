@@ -1,0 +1,12 @@
+body{
+    font-family: "Lexend Deca", serif;
+}
+.main{
+    margin: 0% 10% ;
+}
+.top{
+    margin: 5% 0%;
+    display: flex;
+    justify-content: space-between;
+
+}
