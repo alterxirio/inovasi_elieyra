@@ -28,7 +28,7 @@ if (isset($_POST["username"]) && !empty($_POST["username"])) {
             // $_SESSION['id_user'] = $match["id_user"];
             session_start();
             $_SESSION['user'] = $match["username"];
-            $_SESSION['id'] = $match["user_id"];
+            $_SESSION['id'] = $match["id"];
             header("location:../frontend/main.php");
         } else {
             $_SESSION['error'] = "Username or password invalid";

@@ -13,6 +13,7 @@
 <body>
     <?php
         include('../frontend/navbar.php');
+        include('../config/config.php');
         session_start();
     ?>
 
@@ -24,7 +25,84 @@
         </div>
 
         <div class="mid">
-            
+                <?php
+                    $coach = $_SESSION['id'];
+                    $sql = mysqli_query($con,"SELECT * FROM teams where coach_id ='7'");
+                    // $hello = mysqli_fetch_array($sql);
+                    // echo $hello['name'];
+
+                    while($row = mysqli_fetch_array($sql)){
+                ?>
+                        <div class="card">
+
+                            <div class="card-top">
+                                <b><?php echo $row['name']; ?></b>
+                            </div>
+
+
+                            <div class="card-mid">
+
+                                <div class="card-mid-detail">
+                                    <p>Total Player :</p>
+                                    <P>30</P>
+                                </div>
+
+                                <div class="card-mid-detail">
+                                    <p>Level :</p>
+                                    <P>Begginer</P>
+                                </div>
+
+                                <div class="card-mid-detail">
+                                    <p>Sport :</p>
+                                    <P>Rugby</P>
+                                </div>
+
+                            </div>
+
+                            <center>
+                                <div class="mid-bottom">
+                                    <button>More</button>
+                                </div>
+                            </center>
+
+                        </div>
+
+                         <div class="card">
+
+                            <div class="card-top">
+                                <b><?php echo $row['name']; ?></b>
+                            </div>
+
+                            <div class="card-mid">
+
+                                <div class="card-mid-detail">
+                                    <p>Total Player :</p>
+                                    <P>30</P>
+                                </div>
+
+                                <div class="card-mid-detail">
+                                    <p>Level :</p>
+                                    <P>Begginer</P>
+                                </div>
+
+                                <div class="card-mid-detail">
+                                    <p>Sport :</p>
+                                    <P>Rugby</P>
+                                </div>
+
+                            </div>
+
+                            <center>
+                                <div class="mid-bottom">
+                                    <button>More</button>
+                                </div>
+                            </center>
+
+                        </div>    
+
+                <?php
+                    }
+                ?>
         </div>
 
     </div>
