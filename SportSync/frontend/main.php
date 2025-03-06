@@ -24,89 +24,70 @@
             <p><?php echo date('j/M/Y');?></p>
         </div>
 
-        <div class="mid">
+        <div class="mid-container">
+            <button id="leftBtn" class="scroll-btn">&lt;</button>
+            <div class="mid">
                 <?php
                     $coach = $_SESSION['id'];
-                    $sql = mysqli_query($con,"SELECT * FROM teams where coach_id ='7'");
-                    // $hello = mysqli_fetch_array($sql);
-                    // echo $hello['name'];
-
+                    $sql = mysqli_query($con,"SELECT * FROM teams WHERE coach_id ='7'");
                     while($row = mysqli_fetch_array($sql)){
                 ?>
-                        <div class="card">
-
-                            <div class="card-top">
-                                <b><?php echo $row['name']; ?></b>
-                            </div>
-
-
-                            <div class="card-mid">
-
-                                <div class="card-mid-detail">
-                                    <p>Total Player :</p>
-                                    <P>30</P>
-                                </div>
-
-                                <div class="card-mid-detail">
-                                    <p>Level :</p>
-                                    <P>Begginer</P>
-                                </div>
-
-                                <div class="card-mid-detail">
-                                    <p>Sport :</p>
-                                    <P>Rugby</P>
-                                </div>
-
-                            </div>
-
-                            <center>
-                                <div class="mid-bottom">
-                                    <button>More</button>
-                                </div>
-                            </center>
-
+                    <div class="card">
+                        <div class="card-top">
+                            <b><?php echo $row['name']; ?></b>
                         </div>
-
-                         <div class="card">
-
-                            <div class="card-top">
-                                <b><?php echo $row['name']; ?></b>
+                        <div class="card-mid">
+                            <div class="card-mid-detail">
+                                <p>Total Player :</p>
+                                <p>30</p>
                             </div>
-
-                            <div class="card-mid">
-
-                                <div class="card-mid-detail">
-                                    <p>Total Player :</p>
-                                    <P>30</P>
-                                </div>
-
-                                <div class="card-mid-detail">
-                                    <p>Level :</p>
-                                    <P>Begginer</P>
-                                </div>
-
-                                <div class="card-mid-detail">
-                                    <p>Sport :</p>
-                                    <P>Rugby</P>
-                                </div>
-
+                            <div class="card-mid-detail">
+                                <p>Level :</p>
+                                <p>Beginner</p>
                             </div>
-
-                            <center>
-                                <div class="mid-bottom">
-                                    <button>More</button>
-                                </div>
-                            </center>
-
-                        </div>    
-
+                            <div class="card-mid-detail">
+                                <p>Sport :</p>
+                                <p>Rugby</p>
+                            </div>
+                        </div>
+                        <center>
+                            <div class="mid-bottom">
+                                <button>More</button>
+                            </div>
+                        </center>
+                    </div>
                 <?php
                     }
                 ?>
+            </div>
+
+            <button id="rightBtn" class="scroll-btn">&gt;</button>
+
         </div>
 
     </div>
     
 </body>
+    <script>
+        var mid = document.querySelector(".mid");
+        document.getElementById("leftBtn").onclick = function () {
+            mid.scrollBy({ left: -300, behavior: 'smooth' });
+            animateCards();
+        };
+        document.getElementById("rightBtn").onclick = function () {
+            mid.scrollBy({ left: 300, behavior: 'smooth' });
+            animateCards();
+        };
+
+        function animateCards() {
+            let cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.animation = "fadeIn 0.5s ease-in-out";
+                setTimeout(() => {
+                    card.style.animation = "";
+                }, 500);
+            });
+        }
+    </script>
 </html>
 

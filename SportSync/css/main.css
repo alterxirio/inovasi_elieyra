@@ -13,16 +13,18 @@ body{
     display: flex;
     background-color: blue;
     overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
     padding: 10px; /* Add some spacing */
 }
 
 .card {
-    flex: 0 0 250px; /* Fixed width of 200px, no shrinking or growing */
+    flex: 0 0 300px; /* Fixed width of 200px, no shrinking or growing */
     margin: 0px 10px; /* Reduce margin for better spacing */
     border-radius: 5px;
     background-color: darkgreen;
-    width: 250px; /* Ensure consistent width */
+    width: 300px; /* Ensure consistent width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    scroll-snap-align: start;
 }
 .card-top{
     color: whitesmoke;
@@ -48,4 +50,22 @@ body{
     border-radius: 20px;
     margin-bottom: 20px;
     padding: 5px;
+}
+
+.mid-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
 }
