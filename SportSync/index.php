@@ -45,7 +45,7 @@
                     
                         <br>
 
-                        <label for="">Dont have an account? <a href="">Sign Up</a></label>
+                       <p>Dont have an account? <a href="./frontend/register.php">Sign Up</a><p>
 
                     </form>
 
