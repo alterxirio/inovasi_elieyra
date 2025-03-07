@@ -17,13 +17,17 @@ body{
     justify-content: space-between;
     border-radius: 10px;
     overflow: hidden; 
+    background: white;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
     
 }
-.right{
-    background-color: blue;
+.right {
+    background: linear-gradient(to right, #000080, #8080FF);
     width: 50%;
-    
+    height: 400px;
+    position: relative;
 }
+
 .left{
     width: 50%;
     color: black;
@@ -53,7 +57,7 @@ button{
     border-radius: 20px;
     margin-top: 25px;
     color: #fff;
-    background-color: blue;
+    background-color: #000080;
 }
 
     
