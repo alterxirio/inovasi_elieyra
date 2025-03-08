@@ -22,7 +22,7 @@ body{
     
 }
 .right {
-    background: linear-gradient(to right, #000080, #8080FF);
+        background: linear-gradient(to right, #000080, #8080FF);
     width: 50%;
     height: 400px;
     position: relative;
