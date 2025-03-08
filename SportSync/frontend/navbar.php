@@ -1,6 +1,7 @@
 
 <head>
     <style>
+        
         body{
             /* font-size: medium; */
             user-select: none;
@@ -10,6 +11,9 @@
             justify-content: space-between;
             padding: 20px 10%;
             background-color:#000080  ;
+            position: relative;
+            z-index: 1000; /* Higher than card-container */
+
         }
         a{
             color:#ffffff ;
@@ -61,9 +65,10 @@
             padding-left: 5%;
             padding-top: 5%;
             padding-right: 5%;
+            z-index: 1000;
         }
 
-    
+
         .menu-right{
             color: #ffffff;
             font-size: medium;

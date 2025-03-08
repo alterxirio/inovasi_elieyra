@@ -30,8 +30,6 @@ body{
     width: 300px; /* Ensure consistent width */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     scroll-snap-align: start;
-    z-index: 1;
-
 
 }
 .card-top{
@@ -84,13 +82,10 @@ body{
     transform: translateX(100%); 
     display: flex;
     background-color: red;
-    z-index: 1;
     
 }
 .active {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-    z-index: 1;
-
 }

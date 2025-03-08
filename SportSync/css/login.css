@@ -19,7 +19,7 @@ body{
     overflow: hidden; 
     background: white;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
-    
+    z-index: 100;
 }
 .right {
     background: linear-gradient(to right, #000080, #8080FF);
