@@ -124,7 +124,6 @@ body{
 .no-team{
     height: 100%;
     width: 100%;
-    background-color: blueviolet;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,4 +134,43 @@ body{
     margin: auto; /* Centers it horizontally */
     padding: 20px;
     border-radius: 20px;
+    display: flex;
+}
+span img{
+    width: 30px;
+    height: 30px;
+    display: inline;
+    margin-left: 10px;
+}
+.mobile{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+
+
+    .mobile{
+        display: block;
+        justify-content: center;
+        display: flex;
+    }
+    .desktop{
+        display: none;
+    }
+    .mid-mobile{
+        align-items: center;
+    }
+    .card {
+        border-radius: 5px;
+        background-color: darkgreen;
+        max-height:  280px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        scroll-snap-align: start;
+        z-index: 1;
+        margin: 30px 25px;
+        border-radius: 15px;
+        width: 250px;
+    }
+    
+    
+
 }
