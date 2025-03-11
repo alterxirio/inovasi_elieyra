@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sprint" />
 </head>
 <body>
     <?php
@@ -25,61 +26,82 @@
         </div>
 
         <div class="mid-container">
-            <button onclick="prevSlide()" id="leftBtn" class="scroll-btn">&lt;</button>
+            
             <div class="mid">
+
+                <div class="previous">
+                    <button onclick="prevSlide()" id="leftBtn" class="scroll-btn">&lt;</button>
+                </div>
+
                 <?php
                     $coach = $_SESSION['id'];
-                    $sql = mysqli_query($con, "SELECT * FROM teams WHERE coach_id ='7'");
+                    $sql = mysqli_query($con, "SELECT * FROM teams WHERE coach_id ='0'");
                     $cardCount = 0; // Initialize a counter
                     $id = 1;
 
-                    while ($row = mysqli_fetch_array($sql)) {
-                        // Start a new card-container every 3 cards
-                        if ($cardCount % 3 == 0) {
-                            if ($cardCount > 0) {
-                                echo '</div>'; // Close the previous card-container
-                            }
-                            echo '<div class="card-container" id='.$id.'?>'; // Open a new card-container
-                            $id++;
-                        }
-                ?>
-                        <div class="card" >
-                            <div class="card-top">
-                                <b><?php echo $row['name']; ?></b>
-                            </div>
-                            <div class="card-mid">
-                                <div class="card-mid-detail">
-                                    <p>Total Player :</p>
-                                    <p>30</p>
-                                </div>
-                                <div class="card-mid-detail">
-                                    <p>Level :</p>
-                                    <p>Beginner</p>
-                                </div>
-                                <div class="card-mid-detail">
-                                    <p>Sport :</p>
-                                    <p>Rugby</p>
-                                </div>
-                            </div>
-                            <center>
-                                <div class="mid-bottom">
-                                    <button>More</button>
-                                </div>
-                            </center>
-                        </div>
+                    if(mysqli_num_rows($sql) == 0){
+                        echo '<div class="no-team">';
+                                echo '<div class="no-team-inner">';
+                                    echo '<p>Oops! No team yet—let’s create one <span class="material-symbols-rounded">sprint</span></p>';
+                                echo '</div>';
+                        echo '</div>';
+                    }
+                    else{
 
+                        while ($row = mysqli_fetch_array($sql)) {
+                            // Start a new card-container every 3 cards
+                            if ($cardCount % 3 == 0) {
+                                if ($cardCount > 0) {
+                                    echo '</div>'; // Close the previous card-container
+                                }
+                                echo '<div class="card-container" id='.$id.'?>'; // Open a new card-container
+                                $id++;
+                            }
+                    ?>
+                            <div class="card" >
+                                <div class="card-top">
+                                    <b><?php echo $row['name']; ?></b>
+                                </div>
+                                <div class="card-mid">
+                                    <div class="card-mid-detail">
+                                        <p>Total Player :</p>
+                                        <p><?php echo $row['totalPlayer']; ?></p>
+                                    </div>
+                                    <div class="card-mid-detail">
+                                        <p>Level :</p>
+                                        <p><?php echo $row['level']; ?></p>
+                                    </div>
+                                    <div class="card-mid-detail">
+                                        <p>Sport :</p>
+                                        <p><?php echo $row['sport']; ?></p>
+                                    </div>
+                                </div>
+                                <center>
+                                    <div class="mid-bottom">
+                                        <button>More</button>
+                                    </div>
+                                </center>
+                            </div>
+    
+                            
+                    <?php
+                            $cardCount++; // Increment the counter
+                        }
+                        // Close the last card-container if it was opened
+                        if ($cardCount > 0) {
+                            echo '</div>'; // Close the last card-container
+                        }
+                    }
                         
-                <?php
-                        $cardCount++; // Increment the counter
-                    }
-                    // Close the last card-container if it was opened
-                    if ($cardCount > 0) {
-                        echo '</div>'; // Close the last card-container
-                    }
+                    ?> 
                     
-                ?>
+                
+                <div class="next">
+                    <button onclick="nextSlide()" id="rightBtn" class="scroll-btn">&gt;</button>
+                </div>
+
             </div>
-            <button onclick="nextSlide()" id="rightBtn" class="scroll-btn">&gt;</button>
+            
         </div>
 
     </div>

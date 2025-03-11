@@ -1,47 +1,59 @@
 body{
     font-family: "Lexend Deca", serif;
+    height: 100vh;
+    background-color: red;
 }
 .main{
     margin: 0% 8% ;
 }
 .top{
-    margin: 5% 0%;
+    margin: 4% 0%;
     display: flex;
     justify-content: space-between;
+}
+.mid-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    height: 350px;
+    background-color: yellow;
 }
 .mid {
     display: flex;
     background-color: blue;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap;
-    padding: 10px; /* Add some spacing */
     width: 100%;
-    padding: 30px 10px;
+    padding: 0px 10px;
     scrollbar-width: none;
-    justify-content: center;
-    border-radius: 10px;
+    justify-content: space-evenly;
+    position: relative;
+    height: 100%;
 }
 
 .card {
-    flex: 0 0 300px; /* Fixed width of 200px, no shrinking or growing */
+    flex: 0 0 250px; /* Fixed width of 200px, no shrinking or growing */
     margin: 0px 10px; /* Reduce margin for better spacing */
     border-radius: 5px;
     background-color: darkgreen;
     width: 300px; /* Ensure consistent width */
+    max-height:  280px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     scroll-snap-align: start;
     z-index: 1;
-
-
+    margin: 30px 25px;
+    border-radius: 15px;
 }
 .card-top{
     color: whitesmoke;
     text-align: center;
-    padding: 5px 0px;
+    padding: 10px 0px;
     background-color: purple;
+    border-radius: 15px 15px 0px 0px;
 }
 .card-mid{
-    padding: 20px 40px;
+    padding: 15px 25px;
 }
 .card-mid-detail{
     display: flex;
@@ -60,19 +72,34 @@ body{
     padding: 5px;
 }
 
-.mid-container {
+.previous{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    
-}
+    position: absolute;
+    left: 0;
+    height: 100%;
+    margin-left: 30px;
 
-.scroll-btn {
+}
+.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    margin-right: 30px;
+} 
+
+.scroll-btn{
     background-color: black;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    height: 50px;
+    font-size: larger;
 }
 .card:hover {
     transform: scale(1.05);
@@ -83,8 +110,8 @@ body{
     opacity: 0;
     transform: translateX(100%); 
     display: flex;
-    background-color: red;
     z-index: 1;
+    justify-content: space-evenly;
     
 }
 .active {
@@ -93,4 +120,19 @@ body{
     transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
     z-index: 1;
 
+}
+.no-team{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-team-inner{
+    background-color: gray;
+    width: fit-content; /* Ensure it takes only necessary width */
+    margin: auto; /* Centers it horizontally */
+    padding: 20px;
+    border-radius: 20px;
 }
