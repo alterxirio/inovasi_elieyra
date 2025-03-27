@@ -101,13 +101,13 @@
     <div class="navbar">
         <div class="left">
             <div class="logo">
-                <h3><a href="">SportSync .</a></h3>
+                <h3><a href="../frontend/main.php">SportSync .</a></h3>
                 <hr>
             </div>
         </div>  
         <div class="right">
             <div class="link">
-                <a href="">New Team</a>
+                <a href="../frontend/newTeam.php">New Team</a>
                 <a href="">text</a>
                 <a href="">Account</a>
             </div>

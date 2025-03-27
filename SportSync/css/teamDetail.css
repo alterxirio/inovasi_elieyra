@@ -1,0 +1,80 @@
+body{
+    font-family: "Lexend Deca", serif;
+    height: 100vh;
+    scrollbar-width: 1px;
+    background-color: whitesmoke;
+}
+.main{
+    margin: 0% 8% ;
+    padding-bottom: 40px;
+
+}
+.top{
+    margin: 3% 0%;
+    display: flex;
+    justify-content: space-between;
+}
+label{
+    color: black;
+}
+.mid-top{
+    margin-bottom: 3%;
+}
+hr{
+    border: 1px solid grey;
+}
+.no-team{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-team-inner{
+    background-color: gray;
+    width: fit-content; /* Ensure it takes only necessary width */
+    margin: auto; /* Centers it horizontally */
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+}
+span img{
+    width: 30px;
+    height: 30px;
+    display: inline;
+    margin-left: 10px;
+}
+.hide-scrollbar::-webkit-scrollbar {
+    width: 0px; /* Adjust scrollbar width */
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px; /* Adjust scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 4px; /* Rounded edges */
+}
+@media screen and (orientation: portrait) {
+
+    .top{
+        font-size: small;
+        margin: 10% 0%;
+    }
+  .mid-top{
+        font-size: 100%;
+        margin: 30px 0px;
+        font-weight: 500;
+    }
+    .mid-top hr{
+        display: none;
+    }
+
+
+}
+
+ 

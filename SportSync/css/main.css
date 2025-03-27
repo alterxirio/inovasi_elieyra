@@ -1,7 +1,6 @@
 body{
     font-family: "Lexend Deca", serif;
     height: 100vh;
-    background-color: red;
 }
 .main{
     margin: 0% 8% ;
@@ -152,6 +151,8 @@ span img{
         display: block;
         justify-content: center;
         display: flex;
+        font-size: smaller;
+
     }
     .desktop{
         display: none;
@@ -162,13 +163,18 @@ span img{
     .card {
         border-radius: 5px;
         background-color: darkgreen;
-        max-height:  280px;
+        /* max-height:  280px; */
+        height: fit-content;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         scroll-snap-align: start;
         z-index: 1;
         margin: 30px 25px;
         border-radius: 15px;
-        width: 250px;
+        width: 220px;
+    }
+    .top{
+        font-size: smaller;
+        margin: 10% 0%;
     }
     
     
