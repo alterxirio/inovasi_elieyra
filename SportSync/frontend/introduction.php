@@ -21,5 +21,24 @@
     <div class="banner">
     <img src="..\media\Ball animation.gif" alt="SportSync">
     </div>
+
+    <div class="about-section">
+    <img src="..\media\Coach and Athlete.png" alt="Coach and Athlete">
+    <div class="about-text">
+        <h2>About SportSync</h2>
+        <p>SportSync is a sports management system that helps coaches and athletes manage schedules, update team info, and communicate efficiently. It ensures organized, fast, and systematic team management.</p>
+    </div>
+</div>
+<div class="mobile-section">
+    <div class="mobile-text">
+        <h2>Mobile Compatible</h2>
+        <p>Our website is fully optimized for mobile devices, providing a seamless, responsive experience. Access coaching resources, training schedules, expert guidance, and interactive features anytime, anywhere on your phone.</p>
+    </div>
+    <div class="mobile-image">
+        <img src="..\media\mobile.png" alt="Mobile App">
+    </div>
+</div>
+
+
 </body>
 </html>
