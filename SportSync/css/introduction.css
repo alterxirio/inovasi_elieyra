@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: "Lexend Deca", serif;
+    text-align: center;
+}
+.menu a {
+    text-decoration: none;
+    margin: 0 15px;
+}
+.banner {
+    height: 91vh;
+    display: flex;
+}
+.banner img {
+    width: 100%;
+}
+.about-section {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    background-color: #6CB2EB;
+    padding: 80px;
+    border-radius: 3px; 
+    margin: auto;
+}
+.about-section img {
+    width: 400px; 
+    height: auto;
+    margin-left: 3px;
+    border-radius: 10px; 
+}
+.about-text {
+    font-size: 20px;
+    color: white;
+    max-width: 600px;
+}
+.about-text h2 {
+    font-size: 38px;
+    font-weight: bold;
+}
+.mobile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #6CB2EB; 
+    padding: 80px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.mobile-text {
+    flex: 1;
+    color: white;
+    font-size: 20px;
+    padding-right: 50px; 
+}
+
+.mobile-text h2 {
+    font-size: 38px; 
+    font-weight: bold;
+}
+
+.mobile-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.mobile-image img {
+    width: 300px; 
+    height: auto;
+    border-radius: 10px;
+}
+
