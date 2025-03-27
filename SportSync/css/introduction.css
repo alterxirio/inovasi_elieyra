@@ -43,7 +43,7 @@ body {
     align-items: center;
     justify-content: space-between; 
     background-color: #6CB2EB; 
-    padding: 80px;
+    padding: 50px;
     border-radius: 10px;
     margin: auto;
 }
@@ -52,7 +52,6 @@ body {
     flex: 1;
     color: white;
     font-size: 20px;
-    padding-right: 50px; 
 }
 
 .mobile-text h2 {
@@ -62,7 +61,6 @@ body {
 
 .mobile-image {
     flex: 1;
-    display: flex;
     justify-content: flex-end; 
 }
 
